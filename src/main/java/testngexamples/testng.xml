@@ -1,0 +1,12 @@
+<suite name="Suite1" verbose="1">
+    <test name="Regression1">
+        <packages>
+            <package name="testngexamples.firsttest"/>
+            <package name="testngexamples.dataprovider"/>
+        </packages>
+    </test>
+
+
+</suite>
+
+
