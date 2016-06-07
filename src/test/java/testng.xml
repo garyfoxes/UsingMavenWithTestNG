@@ -1,11 +1,13 @@
 <suite name="Suite1" verbose="1">
     <test name="Regression1">
+       <!-- <classes>
+            <class name="firsttest.TestNGExample"/>
+        </classes>-->
         <packages>
             <package name="testngexamples.firsttest"/>
             <package name="testngexamples.dataprovider"/>
         </packages>
     </test>
-
 
 </suite>
 
