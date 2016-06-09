@@ -28,22 +28,52 @@
     *TestCase
     I also found that the unit test code should put under the test folder, it can not be recognized as test class if you put it under the main folder
     -->
-    <build>
-        <pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
-            </plugin>
+    <profiles>
+        <profile>
+            <id>
+                IOS APP
+            </id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>2.19.1</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>src/test/java/iosTest.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+                        </plugin>
 
-        </plugins>
-        </pluginManagement>
-    </build>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+
+        <profile>
+            <id>
+                AndroidAPP
+            </id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>2.19.1</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>src/test/java/androidTest.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+                        </plugin>
+
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
