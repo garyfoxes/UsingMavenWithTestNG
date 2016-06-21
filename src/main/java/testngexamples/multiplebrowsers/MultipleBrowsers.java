@@ -11,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -51,7 +50,7 @@ public class MultipleBrowsers {
     @AfterMethod
     public void cleanUp(ITestResult result) throws InterruptedException, IOException {
         Thread.sleep(10000);
-        if(result.getStatus() == ITestResult.SUCCESS){
+        if (result.getStatus() == ITestResult.SUCCESS) {
             takeScreenShot();
         }
         driver.quit();

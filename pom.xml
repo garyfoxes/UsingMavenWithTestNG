@@ -38,6 +38,13 @@
             <artifactId>log4j-core</artifactId>
             <version>2.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.0</version>
+        </dependency>
+
 
     </dependencies>
     <!--By default Maven uses the following naming conventions when looking for tests to run:
