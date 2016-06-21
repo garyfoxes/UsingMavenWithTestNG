@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="MyConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] (%F:%L) - %m%n"/>
+        </Console>
+
+        <File name="MyFile" fileName="log4j-application.html" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p  [%t] (%F:%L) - %m%n"/>
+        </File>
+
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="MyFile" level="INFO"/>
+            <AppenderRef ref="MyConsole" level="INFO"/>
+        </Root>
+    </Loggers>
+    
+</Configuration>
+        <!--
+        Level Hierarchy
+        All < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+        If you specify level as "info" then it will log everything with a
+        level of "info" and less e.g it will log info,warn,error,fatal
+
+        It is recommended to use log4j over Reporter.log
+        -->

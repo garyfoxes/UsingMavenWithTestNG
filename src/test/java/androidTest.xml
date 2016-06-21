@@ -1,14 +1,46 @@
-<suite name="Suite1" verbose="1">
-    <test name="Regression1">
-       <!-- <classes>
-            <class name="firsttest.TestNGExample"/>
-        </classes>-->
+<suite name="Suite1" verbose="1" parallel="tests" thread-count="2">
+    <listeners>
+        <!--<listener class-name="org.testng.reporters.EmailableReporter2"/>-->
+      <!--  <listener class-name="testngexamples.SeleniumListeners"/>-->
+    </listeners>
+    <test name="Chrome Test">
+       <!-- <parameter name="name" value="Gary"/>-->
+        <!-- <classes>
+              <class name="firsttest.TestNGExampleTest">
+                  <methods>
+                      <include name="subtractNumbers"/>
+                      <include name ="addNumbers"/>
+                  </methods>
+              </class>
+          </classes>-->
+       <!-- <groups>
+            <define name="Sample Groups">
+                <include name="Testing Groups"/>
+                <include name="testNGExample"/>
+            </define>
+            <run>
+                <include name="Sample Groups"/>
+            </run>
+        </groups>
         <packages>
-            <package name="testngexamples.firsttest"/>
-            <package name="testngexamples.dataprovider"/>
-        </packages>
+            <package name="testngexamples.*"/>
+        </packages>-->
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name ="testngexamples.multiplebrowsers.MultipleBrowsers"/>
+        </classes>
     </test>
-
+    <test name="Safari Test">
+        <parameter name="browserType" value="safari"/>
+        <classes>
+            <class name ="testngexamples.multiplebrowsers.MultipleBrowsers"/>
+        </classes>
+    </test>
 </suite>
+        <!-- verbose is how much logging will be displayed in the console 1 been very little, 10 been alot of logs
+         parallel="tests"(this means everything inside the tests will be run by th same thread)
+         parallel="classes"(this means any tests within a class will be run by the same thread)
+
+         -->
 
 

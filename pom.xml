@@ -7,19 +7,37 @@
     <groupId>com.jetbrains</groupId>
     <artifactId>demo-test</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <selenium.version>2.53.0</selenium.version>
+    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.6</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.1</version>
+        </dependency>
 
     </dependencies>
     <!--By default Maven uses the following naming conventions when looking for tests to run:
@@ -28,8 +46,7 @@
     *TestCase
     I also found that the unit test code should put under the test folder, it can not be recognized as test class if you put it under the main folder
     -->
-
-            <build>
+    <build>
                 <pluginManagement>
                     <plugins>
                         <plugin>
