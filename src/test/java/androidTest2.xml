@@ -1,0 +1,23 @@
+<suite name="Suite1" verbose="1" parallel="tests" thread-count="2">
+    <test name="Chrome Test">
+        <parameter name="browserType" value="chrome"/>
+        <parameter name="platform" value="Mac"/>
+        <classes>
+            <class name ="testngexamples.seleniumgrid.SeleniumGridExample"/>
+        </classes>
+    </test>
+    <test name="Safari Test">
+        <parameter name="browserType" value="safari"/>
+        <parameter name="platform" value="Mac"/>
+        <classes>
+            <class name ="testngexamples.seleniumgrid.SeleniumGridExample"/>
+        </classes>
+    </test>
+</suite>
+        <!-- verbose is how much logging will be displayed in the console 1 been very little, 10 been alot of logs
+         parallel="tests"(this means everything inside the tests will be run by th same thread)
+         parallel="classes"(this means any tests within a class will be run by the same thread)
+
+         -->
+
+

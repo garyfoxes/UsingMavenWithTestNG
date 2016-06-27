@@ -37,12 +37,12 @@ public class FileUpload {
 
     @Test
     public void fileUpload() throws AWTException, InterruptedException {
-        driver.findElement(By.id("Email")).sendKeys("garyledzep85");
+        driver.findElement(By.id("Email")).sendKeys("*******");//enter real email address e.g joe1984(no need for @gmail.com)
         driver.findElement(By.id("next")).click();
-        driver.findElement(By.id("Passwd")).sendKeys("ledzep1985");
+        driver.findElement(By.id("Passwd")).sendKeys("*****");//real password here
         driver.findElement(By.id("signIn")).click();
         driver.findElement(By.xpath("//div[text()='COMPOSE']")).click();
-        driver.findElement(By.xpath("//div[@class='wO nr l1']//textarea")).sendKeys("garyledzep85@gmail.com");
+        driver.findElement(By.xpath("//div[@class='wO nr l1']//textarea")).sendKeys("*******");//receipent email address
         driver.findElement(By.xpath("//input[@name='subjectbox']")).sendKeys("Test File Upload");
         WebElement fileInput = driver.findElement(By.xpath("//div[@class='a1 aaA aMZ']"));
         fileInput.click();
