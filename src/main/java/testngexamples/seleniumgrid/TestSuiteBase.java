@@ -53,7 +53,7 @@ public class TestSuiteBase {
         if (platform.equalsIgnoreCase("Mac")) {
             capabilities.setPlatform(Platform.MAC);
         } else {
-            capabilities.setPlatform(Platform.WIN8);
+            capabilities.setPlatform(Platform.WIN10);
         }
 
 

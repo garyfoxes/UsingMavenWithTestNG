@@ -7,8 +7,8 @@
         </classes>
     </test>
     <test name="Safari Test">
-        <parameter name="browserType" value="safari"/>
-        <parameter name="platform" value="Mac"/>
+        <parameter name="browserType" value="chrome"/>
+        <parameter name="platform" value="WIN10"/>
         <classes>
             <class name ="testngexamples.seleniumgrid.SeleniumGridExample"/>
         </classes>
