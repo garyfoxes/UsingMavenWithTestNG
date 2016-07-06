@@ -27,7 +27,7 @@
         </packages>-->
         <parameter name="browserType" value="chrome"/>
         <classes>
-            <class name ="testngexamples.multiplebrowsers.MultipleBrowsers"/>
+            <class name ="firsttest.TestNGExampleTest"/>
         </classes>
     </test>
     <test name="Safari Test">
