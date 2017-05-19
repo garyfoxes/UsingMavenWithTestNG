@@ -18,8 +18,8 @@ public class TestObject {
     }
 
     public double getPredictedIncome() {
-        if (this.age > 17 && this.age < 90) {
-            if (married) {
+        if (this.getAge() > 17 && this.getAge() < 90) {
+            if (isMarried()) {
                 return 40000;
             } else {
                 return 60000;
@@ -27,5 +27,21 @@ public class TestObject {
         } else {
             return 0.0;
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public boolean isMarried() {
+        return married;
     }
 }

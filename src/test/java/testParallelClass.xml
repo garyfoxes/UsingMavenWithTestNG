@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test-class Suite" parallel="classes" thread-count="4" >
+    <test name="Test-class test 1" >
+        <parameter name="test-name" value="test-method 1" />
+        <classes>
+            <class name="paralleltests.TestParallelClass1" />
+            <class name="paralleltests.TestParallelClass2" />
+        </classes>
+    </test>
+    <test name="Test-class test 2" >
+        <parameter name="test-name" value="test-method 2" />
+        <classes>
+            <class name="paralleltests.TestParallelClass1" />
+            <class name="paralleltests.TestParallelClass2" />
+        </classes>
+    </test>
+</suite>
+        <!--
+        Parallel Classes will run classes within a test in parallel.
+        The above example will run the the 2 tests sequentially but inside the test it will run the classes in parallel.
+        So test1 will run and the execute the 2 classes in parallel
+        Then test2 will run and execute the 2 classes in parallel
+        -->

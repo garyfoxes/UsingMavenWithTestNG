@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 /**
  * Created by gfox on 04/05/2016.
  */
-public class TestWithDataProvider {
+public class  TestWithDataProvider {
 
     @DataProvider(name = "test1")
     public static Object[][] primeNumbers() {

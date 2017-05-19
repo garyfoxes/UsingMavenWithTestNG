@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test-class Suite" parallel="tests" thread-count="2" data-provider-thread-count="2">
+    <test name="Test-class test 1">
+        <parameter name="test-name" value="TEST 1"/>
+        <classes>
+            <class name="paralleltests.TestParallelWithDataProviders"/>
+        </classes>
+    </test>
+</suite>
+        <!--
+              Parallel Tests Using Data Provider.
+              This test will run the same class based on the number of data sets in the data provider specified
+              In your class the data-provider annotation must be supplied with a parameter parallel=true otherwise the tests will not be run in seperate thread
+              -->
